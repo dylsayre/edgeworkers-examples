@@ -239,7 +239,7 @@ export function getFingerprintRawString(buffer) {
     console.log("signature algorithms:", signature_algorithms_joined);
   }
 
-  return [protocol_version, cipher_suites_joined, extensions_joined, elliptic_curves_joined, ec_point_formats_joined, signature_algorithms_joined].join('+');
+  return [protocol_version, cipher_suites_length, cipher_suites_joined, compression_methods_length, extensions_joined, elliptic_curves_joined, ec_point_formats_joined, signature_algorithms_joined].join('+');
 }
 
 export function advancedFingerprint(buffer) {
